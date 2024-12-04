@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+    Index it works!!
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-export default defineComponent({})
+export default defineComponent({
+
+})
 </script>
