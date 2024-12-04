@@ -1,14 +1,15 @@
 <template>
-    <hero />
-    Index it works!!
+    <div class="h-dvh">
+        <carousel />
+    </div>
 </template>
 <script lang="ts">
-import { Hero } from '@/core/components/atoms';
 import { defineComponent } from 'vue';
+import { Carousel } from '../molecules';
 
 export default defineComponent({
     components: {
-        Hero
+        Carousel
     }
 })
 </script>

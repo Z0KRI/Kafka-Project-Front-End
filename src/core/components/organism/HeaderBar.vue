@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-white">
+    <header class="bg-white w-full sticky top-0 z-30">
         <nav class="flex justify-between items-center w-[92%]  mx-auto">
             <div>
                 <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png"
