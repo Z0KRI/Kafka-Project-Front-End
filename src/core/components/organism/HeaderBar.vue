@@ -7,9 +7,11 @@
             </div>
             <div
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 transition-all [&>li]:duration-150">
-                    <li class="hover:bg-[#83aaee] hover:text-white px-2 py-1 rounded-lg">
-                        <a href="#">Salud Mental</a>
+                <ul
+                    class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 transition-all [&>li]:duration-150">
+                    <li class="hover:bg-[#83aaee] hover:text-white px-2 py-1 rounded-lg"
+                        v-for="(item, index) in MenuService()" :key="index">
+                        <router-link :to="item.link">{{ item.title }}</router-link>
                     </li>
                 </ul>
             </div>
@@ -19,8 +21,11 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { MenuService } from '@/presentation/services/menu.service';
 
 export default defineComponent({
-
+    methods: {
+        MenuService
+    },
 })
 </script>
