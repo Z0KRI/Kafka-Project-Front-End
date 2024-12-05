@@ -1,6 +1,8 @@
 <template>
   <header-bar />
-  <router-view />
+  <div class="px-20">
+    <router-view />
+  </div>
   <footer-component />
 </template>
 <script lang="ts">
