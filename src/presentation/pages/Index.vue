@@ -1,6 +1,6 @@
 <template>
     <hero />
-    <section id="informacion" class="pb-16 px-20">
+    <section id="informacion" class="pb-16">
         <h2 class="text-3xl font-bold mb-6 text-gray-900">Información Clave</h2>
         <div class="grid md:grid-cols-2 gap-8">
             <card title="Panorama general" class="bg-white">
@@ -20,7 +20,7 @@
             </card>
         </div>
     </section>
-    <section id="estadisticas" class="pb-8 px-20">
+    <section id="estadisticas" class="pb-8">
         <h2 class="text-3xl font-bold mb-6 text-gray-900">Estadísticas</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <card class="bg-chablis-200 text-center">
