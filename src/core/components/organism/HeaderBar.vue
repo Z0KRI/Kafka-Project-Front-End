@@ -1,20 +1,15 @@
 <template>
-    <header class="bg-white w-full sticky top-0 z-30">
-        <nav class="flex justify-between items-center w-[95%]  mx-auto">
-            <div>
-                <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png"
-                    alt="...">
-            </div>
-            <div
-                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul
-                    class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 transition-all [&>li]:duration-150">
-                    <li class="hover:bg-[#83aaee] hover:text-white px-2 py-1 rounded-lg"
-                        v-for="(item, index) in MenuService()" :key="index">
-                        <router-link :to="item.link">{{ item.title }}</router-link>
-                    </li>
-                </ul>
-            </div>
+    <header class="w-full mx-auto px-14 py-6 flex justify-between items-center sticky top-0 bg-chablis-50 shadow-black drop-shadow-sm">
+        <div class="flex items-center gap-2">
+            <svg class="h-6 w-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span class="text-xl font-semibold">SaludMental</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+            <a href="#informacion" class="text-gray-600 hover:text-gray-900">Información</a>
+            <a href="#estadisticas" class="text-gray-600 hover:text-gray-900">Estadísticas</a>
+            <a href="#recursos" class="text-gray-600 hover:text-gray-900">Recursos</a>
         </nav>
     </header>
 </template>

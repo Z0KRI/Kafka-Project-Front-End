@@ -1,14 +1,18 @@
 <template>
-    <div class="h-[calc(100dvh-9dvh)]">
-        <carousel :slides="[
-            {
-                src: 'https://images.unsplash.com/photo-1621887348744-6b0444f8a058?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                msg: 'La salud mental es lo mas importante ',
-                class: 'justify-start px-52'
-            },
-            { src: 'https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp' }
-        ]" />
-    </div>
+    <section class="text-center my-16">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+            Salud Mental en el Sector Privado
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Descubre cómo el sector privado está abordando los desafíos de la salud mental y promoviendo el bienestar
+            emocional en el ámbito laboral.
+        </p>
+        <a href="#informacion"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700">
+            Más Información
+            <i class="bi bi-arrow-right ml-2 text-xl" />
+        </a>
+    </section>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
