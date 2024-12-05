@@ -1,11 +1,12 @@
 <template>
     <section class="text-center my-16">
         <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-            Salud Mental en el Sector Privado
+            El Suicidio: Un Desafío Global <br>
+            de Salud Pública
         </h1>
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Descubre cómo el sector privado está abordando los desafíos de la salud mental y promoviendo el bienestar
-            emocional en el ámbito laboral.
+            El suicidio es impulsado por una combinación de factores personales y contextuales. Comprender sus causas y
+            grupos de riesgo es clave para implementar estrategias efectivas de prevención a nivel global.
         </p>
         <a href="#informacion"
             class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700">

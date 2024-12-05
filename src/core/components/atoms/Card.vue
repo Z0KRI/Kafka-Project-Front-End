@@ -12,8 +12,7 @@ export default defineComponent({
     mixins: [ComponentMixin],
     props: {
         title: {
-            type: String,
-            required: true
+            type: String
         },
     }
 })
