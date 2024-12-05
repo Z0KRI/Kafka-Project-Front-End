@@ -1,40 +1,39 @@
 <template>
-    <div :class="cn('carousel w-full h-full')">
-        <div id="slide1" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide4" class="btn btn-circle">❮</a>
-                <a href="#slide2" class="btn btn-circle">❯</a>
+    <div :class="cn('carousel w-full h-full', $props.class)">
+        <div v-for="(slide, index) in slides" :key="index" :id="'slide' + (index + 1)"
+            class="carousel-item relative w-full">
+            <div class="w-full h-full bg-cover bg-center" :style="{ backgroundImage: `url('${slide.src}')` }">
+                <h3 :class="cn('w-full h-full bg-black/45 flex justify-center items-center text-white', slide.class)"
+                    v-if="slide.msg">
+                    {{ slide.msg }}
+                </h3>
             </div>
-        </div>
-        <div id="slide2" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
             <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide1" class="btn btn-circle">❮</a>
-                <a href="#slide3" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide3" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide2" class="btn btn-circle">❮</a>
-                <a href="#slide4" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide4" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide3" class="btn btn-circle">❮</a>
-                <a href="#slide1" class="btn btn-circle">❯</a>
+                <a :href="'#slide' + (index === 0 ? slides.length : index)"
+                    class="btn btn-circle opacity-20 hover:opacity-80">
+                    ❮
+                </a>
+                <a :href="'#slide' + (index === slides.length - 1 ? 1 : index + 2)"
+                    class="btn btn-circle opacity-20 hover:opacity-80">
+                    ❯
+                </a>
             </div>
         </div>
     </div>
 </template>
+
 <script lang="ts">
 import { ComponentMixin } from '@/common/mixins';
-import { defineComponent } from 'vue';
+import { ICarousel } from '@/core/interfaces/carousel.interface';
+import { defineComponent, PropType } from 'vue';
 
 export default defineComponent({
-    mixins: [ComponentMixin]
-})
+    mixins: [ComponentMixin],
+    props: {
+        slides: {
+            type: Array as PropType<ICarousel[]>,
+            required: true,
+        },
+    },
+});
 </script>

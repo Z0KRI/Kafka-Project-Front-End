@@ -1,6 +1,6 @@
 <template>
     <header class="bg-white w-full sticky top-0 z-30">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+        <nav class="flex justify-between items-center w-[95%]  mx-auto">
             <div>
                 <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png"
                     alt="...">
@@ -15,7 +15,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center gap-6"> </div>
         </nav>
     </header>
 </template>
