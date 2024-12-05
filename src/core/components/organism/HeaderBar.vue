@@ -16,14 +16,30 @@
             <router-link :to="{ name: 'Resources' }" class="text-gray-600 hover:text-gray-900">Recursos</router-link>
         </nav>
     </header>
+    <breadcrumbs class="px-20" v-if="isNotHome" />
 </template>
 <script lang="ts">
+import { useRoute } from 'vue-router';
 import { defineComponent } from 'vue';
+
 import { MenuService } from '@/presentation/services/menu.service';
+import { Breadcrumbs } from '../atoms';
 
 export default defineComponent({
     methods: {
         MenuService
     },
+    components: {
+        Breadcrumbs
+    },
+    data() {
+        const route = useRoute();
+        return { route }
+    },
+    computed: {
+        isNotHome() {
+            return this.route.name !== 'Home';
+        }
+    }
 })
 </script>
