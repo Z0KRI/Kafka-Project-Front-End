@@ -21,11 +21,12 @@ export class MentalHealthMapper {
   }
 
   static SuicidesRegistered(
-    entity: ISuicidesRegistered
-  ): ISuicidesRegisteredModel {
-    return {
-      ...entity,
-      registeredDeaths: entity.registered_deaths,
-    };
+    entity: ISuicidesRegistered[]
+  ): ISuicidesRegisteredModel[] {
+    return entity.map((i) => ({
+      id: i.id,
+      period: i.period,
+      registeredDeaths: i.registered_deaths,
+    }));
   }
 }

@@ -6,7 +6,7 @@ export class SuicidesRegisteredUseCase {
   constructor(
     private readonly mentalHealthRepository: MentalHealthRepository
   ) {}
-  execute(): Observable<ISuicidesRegisteredModel> {
+  execute(): Observable<ISuicidesRegisteredModel[]> {
     return this.mentalHealthRepository.getSuicidesRegistered();
   }
 }

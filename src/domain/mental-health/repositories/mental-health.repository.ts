@@ -8,7 +8,7 @@ import {
 export abstract class MentalHealthRepository {
   abstract getMentalHealthIndicator(): Observable<IIndicatorModel>;
 
-  abstract getSuicidesRegistered(): Observable<ISuicidesRegisteredModel>;
+  abstract getSuicidesRegistered(): Observable<ISuicidesRegisteredModel[]>;
 
-  abstract getEntitiesViolentDeaths(): Observable<IEntityViolentDeathsModel>;
+  abstract getEntitiesViolentDeaths(): Observable<IEntityViolentDeathsModel[]>;
 }

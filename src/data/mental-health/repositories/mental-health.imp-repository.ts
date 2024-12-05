@@ -13,7 +13,7 @@ export class MentalHealthImpRepository extends MentalHealthRepository {
     super();
   }
 
-  override getEntitiesViolentDeaths(): Observable<IEntityViolentDeathsModel> {
+  override getEntitiesViolentDeaths(): Observable<IEntityViolentDeathsModel[]> {
     return this.service.getEntitiesViolentDeaths();
   }
 
@@ -23,7 +23,7 @@ export class MentalHealthImpRepository extends MentalHealthRepository {
       .pipe(map((resp) => MentalHealthMapper.IndicatorToMap(resp)));
   }
 
-  override getSuicidesRegistered(): Observable<ISuicidesRegisteredModel> {
+  override getSuicidesRegistered(): Observable<ISuicidesRegisteredModel[]> {
     return this.service
       .getSuicidesRegistered()
       .pipe(map((resp) => MentalHealthMapper.SuicidesRegistered(resp)));
