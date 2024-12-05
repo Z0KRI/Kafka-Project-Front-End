@@ -12,4 +12,6 @@ const EntitiesViolentDeaths = defineAsyncComponent(
   () => import("./entities-violent-deaths/EntitiesViolentDeaths.vue")
 );
 
-export { Indicator, SuicidesRegistered, EntitiesViolentDeaths };
+const Children = defineAsyncComponent(() => import("./children/Children.vue"));
+
+export { Indicator, SuicidesRegistered, EntitiesViolentDeaths, Children };

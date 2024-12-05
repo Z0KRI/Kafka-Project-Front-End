@@ -1,5 +1,5 @@
 <template>
-    <card class="border border-blue-300 my-5"
+    <card class="border border-blue-300 my-5" id="entities-violent-deaths"
         title="Porcentaje de defunciones registradas por suicidio con respecto al total de muertes violentas por entidad federativa">
         <p class="text-sm mb-3">10.8% Porcentaje</p>
         <div role="tablist" class="tabs tabs-lifted">

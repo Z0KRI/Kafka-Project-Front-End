@@ -1,5 +1,5 @@
 <template>
-    <card class="border border-blue-300 my-5" title="Suicidios registrados">
+    <card class="border border-blue-300 my-5" title="Suicidios registrados" id="suicides-registered">
         <p class="text-sm mb-3">9,072 Defunciones registradas</p>
         <div role="tablist" class="tabs tabs-lifted">
             <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Gráfica" :checked="true" />

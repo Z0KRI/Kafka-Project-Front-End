@@ -28,7 +28,7 @@
             <h2 class="text-3xl font-bold mb-6 text-gray-900">Estadísticas</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <card class="bg-chablis-200 text-center">
-                    <p class="text-4xl font-bold text-rose-600 mb-2">720 000</p>
+                    <p class="text-4xl font-bold text-rose-600 mb-2">7, 300240500</p>
                     <p class="text-gray-700">personas fallecen por suicidio. </p>
                 </card>
                 <card class="bg-chablis-200 text-center">
