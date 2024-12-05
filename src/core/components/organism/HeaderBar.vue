@@ -1,6 +1,6 @@
 <template>
     <header
-        class="w-full mx-auto px-14 py-6 flex justify-between items-center sticky top-0 bg-chablis-50 shadow-black drop-shadow-sm">
+        class="w-full mx-auto px-14 py-6 flex justify-between items-center sticky top-0 bg-chablis-50 shadow-black drop-shadow-sm z-50">
         <div class="flex items-center gap-2">
             <svg class="h-6 w-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -16,7 +16,7 @@
             <router-link :to="{ name: 'Resources' }" class="text-gray-600 hover:text-gray-900">Recursos</router-link>
         </nav>
     </header>
-    <breadcrumbs class="px-20" v-if="isNotHome" />
+    <breadcrumbs class="lg:px-[15rem] py-6" v-if="isNotHome" />
 </template>
 <script lang="ts">
 import { useRoute } from 'vue-router';

@@ -41,20 +41,26 @@
                         causas
                         de muerte.</p>
                 </card>
+                <div class="col-span-3 flex justify-center">
+                    <indicator />
+                </div>
             </div>
         </section>
     </main>
-    <router-view v-else />
+    <router-view v-else class="lg:px-40" />
 </template>
 <script lang="ts">
+import { Indicator } from '@/application/mental-health';
 import { Card, Hero } from '@/core/components/atoms';
+
 import { defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 
 export default defineComponent({
     components: {
         Hero,
-        Card
+        Card,
+        Indicator
     },
 
     data() {
