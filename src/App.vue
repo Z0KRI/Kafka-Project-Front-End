@@ -1,14 +1,16 @@
 <template>
   <header-bar />
   <router-view />
+  <footer-component />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { HeaderBar } from './core/components/organism';
+import { FooterComponent, HeaderBar } from './core/components/organism';
 
 export default defineComponent({
   components: {
-    HeaderBar
+    HeaderBar,
+    FooterComponent
   }
 })
 </script>
