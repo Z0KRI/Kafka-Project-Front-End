@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-const baseApp = "/app";
+import { informationRoutes } from "./information.routes";
+import { resourcesRoutes } from "./resources.routes";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,16 +9,7 @@ const router = createRouter({
       path: "/",
       name: "Home",
       component: () => import("@/presentation/pages/Index.vue"),
-    },
-    {
-      path: `${baseApp}/information`,
-      name: "Information",
-      component: () => import("@/presentation/pages/Information.vue"),
-    },
-    {
-      path: `${baseApp}/resources`,
-      name: "Resources",
-      component: () => import("@/presentation/pages/Resources.vue"),
+      children: [...informationRoutes, ...resourcesRoutes],
     },
   ],
   scrollBehavior(to, from, savedPosition) {
