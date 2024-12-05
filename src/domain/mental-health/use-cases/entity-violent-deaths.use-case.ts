@@ -7,7 +7,7 @@ export class EntityViolentDeathsUseCase {
     private readonly mentalHealthRepository: MentalHealthRepository
   ) {}
 
-  execute(): Observable<IEntityViolentDeathsModel> {
+  execute(): Observable<IEntityViolentDeathsModel[]> {
     return this.mentalHealthRepository.getEntitiesViolentDeaths();
   }
 }

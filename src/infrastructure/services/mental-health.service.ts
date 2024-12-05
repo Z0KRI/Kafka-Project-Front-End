@@ -21,14 +21,14 @@ export class MentalHealthService extends UtilClass {
       .pipe(catchError(this.Errors));
   }
 
-  getSuicidesRegistered(): Observable<ISuicidesRegistered> {
+  getSuicidesRegistered(): Observable<ISuicidesRegistered[]> {
     return this.http
-      .get<ISuicidesRegistered>(`${this.url}/suicides-registered`)
+      .get<ISuicidesRegistered[]>(`${this.url}/suicides-registered`)
       .pipe(catchError(this.Errors));
   }
-  getEntitiesViolentDeaths(): Observable<IEntityViolentDeaths> {
+  getEntitiesViolentDeaths(): Observable<IEntityViolentDeaths[]> {
     return this.http
-      .get<IEntityViolentDeaths>(`${this.url}/entities-violent-death`)
+      .get<IEntityViolentDeaths[]>(`${this.url}/entities-violent-death`)
       .pipe(catchError(this.Errors));
   }
 }
